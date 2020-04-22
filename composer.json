@@ -1,0 +1,19 @@
+{
+  "name": "cast/base-convert",
+  "description" : "Base convert. Based on https://www.php.net/manual/ru/function.base-convert.php#106546",
+  "type": "library",
+  "require": {
+    "php": "^7.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ],
+    "files": [
+      "src/functions.php"
+    ]
+  }
+}
