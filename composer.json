@@ -2,6 +2,7 @@
   "name": "cast/base-convert",
   "description" : "Base convert. Based on https://www.php.net/manual/ru/function.base-convert.php#106546",
   "type": "library",
+  "license": "MIT",
   "require": {
     "php": "^7.3"
   },
