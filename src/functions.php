@@ -10,6 +10,11 @@ const BASE_16 = '0123456789abcdef';
 const BASE_16_UPPER = '0123456789ABCDEF';
 const BASE_58 = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
 
+function _hexdec($input){ return convBase($input, BASE_16, BASE_10);}
+function _hexbin($input){ return convBase($input, BASE_16, BASE_2);}
+function _binhex($input){ return convBase($input, BASE_2, BASE_16);}
+function _bindec($input){ return convBase($input, BASE_2, BASE_10);}
+
 function convBase($numberInput, $fromBaseInput, $toBaseInput) : string
 {
     if ($fromBaseInput==$toBaseInput) return $numberInput;
