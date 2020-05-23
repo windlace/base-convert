@@ -3,6 +3,10 @@
 namespace Cast\BaseConv\Tests;
 
 use function Cast\BaseConv\convBase;
+use function Cast\BaseConv\_hexdec;
+use function Cast\BaseConv\_hexbin;
+use function Cast\BaseConv\_binhex;
+use function Cast\BaseConv\_bindec;
 use PHPUnit\Framework\TestCase;
 
 class ConvTest extends TestCase
@@ -27,5 +31,10 @@ class ConvTest extends TestCase
 
         // From hex to base58
         $this->assertEquals('4mYe63rvrhHmtbXDxDRYGpMPAQnPS8UmhaaiQNrvAQjt', convBase('37fc642590af8494e497a0f7cb07d05cd50458e072ec05895291c00e9bcc570b', '0123456789abcdef', '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'));
+        
+        $this->assertEquals("1506271217759114036", _hexdec("14e759b125ed5334"));
+        $this->assertEquals("1010011100111010110011011000100100101111011010101001100110100", _hexbin("14e759b125ed5334"));
+        $this->assertEquals("14e759b125ed5334", _binhex("1010011100111010110011011000100100101111011010101001100110100"));
+        $this->assertEquals("1506271217759114036", _bindec("1010011100111010110011011000100100101111011010101001100110100"));
     }
 }
